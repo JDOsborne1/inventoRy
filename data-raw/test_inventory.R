@@ -10,6 +10,14 @@ test_inventory <- list(
                         "value" = 5
                         , "unit" = "count"
                 )
+                , "tuna" = list(
+                        "value" = 0
+                        , "unit" = "g"
+                        )
+                , "cheddar" = list(
+                        "value" = 0
+                        , "unit" = "g"
+                )
         )
 )
 
