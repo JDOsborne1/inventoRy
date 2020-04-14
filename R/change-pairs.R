@@ -1,4 +1,4 @@
-inv_ChangePairs <- function(pair_changes, .inventory = test_inventory, .history = test_history ){
+inv_ChangePairs <- function(pair_changes, .inventory = inv_ConnectInventory(), .history = inv_ConnectHistory() ){
         parsed_inventory <- inv_ConvertFromYAML(.inventory)
 
 
@@ -9,14 +9,12 @@ inv_ChangePairs <- function(pair_changes, .inventory = test_inventory, .history 
 
         for(i in names(pair_changes)){
                 new_history <- tibble::tribble(~object, ~quantity, ~unit,  ~time
-                                               , i, as.character(parsed_inventory[["basic"]][[i]]), units::deparse_unit(parsed_inventory[["basic"]][[i]]), lubridate::as_datetime(Sys.time())
+                                               , i, as.numeric(parsed_inventory[["basic"]][[i]]), units::deparse_unit(parsed_inventory[["basic"]][[i]]), lubridate::as_datetime(Sys.time())
                 )
                 .history <- dplyr::bind_rows(.history, new_history)
         }
+        inv_ConnectInventory(inv_ConvertToYAML(parsed_inventory))
+        inv_ConnectHistory(.history)
 
-        list(
-                "new_inventory" = inv_ConvertToYAML(parsed_inventory)
-                , "history" = .history
-        )
 }
 
