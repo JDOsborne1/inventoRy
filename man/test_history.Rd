@@ -5,7 +5,7 @@
 \alias{test_history}
 \title{A testing Dataset for the history}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1 rows and 3 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1 rows and 4 columns.
 }
 \usage{
 test_history
