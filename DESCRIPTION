@@ -8,7 +8,7 @@ Description: Package uses a set of functions to interact with a database which r
     a physical store of objects. Those functions are wrapped in both a command line interface
     and a web API. The intended use cases are for personal inventory management, and for 
     dynamic recipe selection.
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
