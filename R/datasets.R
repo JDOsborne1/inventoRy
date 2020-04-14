@@ -7,3 +7,8 @@
 #'
 #'
 "test_recipes"
+
+#' A testing Dataset for the history
+#'
+#'
+"test_history"
