@@ -1,4 +1,4 @@
-inv_PrintInventory <- function(.inventory = test_inventory){
+inv_PrintInventory <- function(.inventory = inv_ConnectInventory()){
         test_inventory %>%
                 inv_ConvertFromYAML() %>%
                 .[["basic"]] %>%
